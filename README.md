@@ -12,7 +12,11 @@ This module provides a replacement for the default EPrints "Date" and "Date Type
  * Date of deposit
  * Date of completion
 
- ## Setup ##
+## RIOXX2 Support ##
+
+If the RIOXX2 package is installed (https://github.com/eprintsug/rioxx2) it will be automatically configured to use the replacement dates field provided by this package.
+
+## Setup ##
 
 After installation the following steps are required:
 
