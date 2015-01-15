@@ -26,6 +26,7 @@ Edit workflow file (usually archives/repoid/cfg/workflows/eprint/default.xml) an
 
  * replace all occurences of "date" with "dates" (be sure to retain the 'required' setting)
  * remove all occurences of "date_type"
+ * remove rioxx2_dateAccepted and rioxx2_publication_date fields from rioxx2 stage if using RIOXX2 package
 
 ### Migrate existing records ###
 
