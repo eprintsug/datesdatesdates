@@ -18,4 +18,8 @@
 <epp:phrase id="eprint_fieldopt_date_type_accepted">Acceptance</epp:phrase>
 <epp:phrase id="eprint_fieldopt_date_type_deposited">Deposit</epp:phrase>
 
+<!-- rioxx2 overrides -->
+<epp:phrase id="rioxx2_validate_rioxx2_dateAccepted:not_done_field">You need to add an acceptance date to the <span class="ep_problem_field:dates"><epc:phrase ref="eprint_fieldname_dates"/></span> field.</epp:phrase>
+<epp:phrase id="rioxx2_validate_rioxx2_publication_date:not_done_field">You need to add a publication date to the <span class="ep_problem_field:dates"><epc:phrase ref="eprint_fieldname_dates"/></span> field.</epp:phrase>
+
 </epp:phrases>
