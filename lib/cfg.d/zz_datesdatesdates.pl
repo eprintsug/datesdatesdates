@@ -8,13 +8,14 @@ $c->add_dataset_field( "eprint",
 			{ 
 				sub_name => 'date',
 				type => 'date',
-				min_resolution => 'month'
+				min_resolution => 'month',
+				required => 1
 			},
 			{
 				sub_name => 'date_type',
 				type => 'set',
 				options => [qw( published accepted submitted deposited completed )],
-				required => 'yes'
+				required => 1
 			},
 		],
 		input_boxes => 1

@@ -24,9 +24,25 @@ After installation the following steps are required:
 
 Edit workflow file (usually archives/repoid/cfg/workflows/eprint/default.xml) and:
 
- * replace all occurences of "date" with "dates" (be sure to retain the 'required' setting)
- * remove all occurences of "date_type"
- * remove rioxx2_dateAccepted and rioxx2_publication_date fields from rioxx2 stage if using RIOXX2 package
+ 1. replace all occurences of "date" with "dates" (be sure to retain the 'required' setting)
+ 2. remove all occurences of "date_type"
+ 3. remove rioxx2_dateAccepted and rioxx2_publication_date fields from rioxx2 stage if using RIOXX2 package
+
+Recommended alternative to (1): remove all occurences of "date" and add a single occurence of "dates" in its own component (ie. not in the Publication Details component) - this will give you extra validation warnings if a date is entered but an event not selected or vice versa.
+
+````
+  <stage name="core">
+
+    [...]
+
+    <component><field ref="divisions"/></component>
+
+    <component><field ref="dates"/></component>
+
+    <component type="Field::Multi">
+      <title>Publication Details</title>
+      [...]
+````
 
 ### Migrate existing records ###
 
