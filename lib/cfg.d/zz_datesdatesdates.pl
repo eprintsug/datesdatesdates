@@ -51,8 +51,8 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	);
 
 	my @dates = sort {
-		$priority{$a->value( "date_type" )||"default"} <=> $priority{$b->value( "date_type" )||"default"}
-	} @{ $eprint->value( "dates" ) };
+		$priority{$a->{date_type}||"default"} <=> $priority{$b->{date_type}||"default"}
+	} @{ $eprint->value( "dates" )||[] };
 
 	my $date = scalar @dates ? $dates[0]->{date} : undef;
 	my $date_type = scalar @dates ? $dates[0]->{date_type} : undef;
