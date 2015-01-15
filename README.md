@@ -4,7 +4,7 @@ Allows a publication record to have multiple dates.
 
 By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion.
 
-This module provides a replacement for the default EPrints "Date" and "Date Type" fields which allows the entry of any number of the following:
+This module provides a replacement for the default EPrints "Date" and "Date Type" fields which allows the entry of any combination of the following:
 
  * Date of publication
  * Date of acceptance
