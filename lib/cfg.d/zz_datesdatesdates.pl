@@ -8,7 +8,7 @@ $c->add_dataset_field( "eprint",
 			{ 
 				sub_name => 'date',
 				type => 'date',
-				min_resolution => 'year'
+				min_resolution => 'month'
 			},
 			{
 				sub_name => 'date_type',
@@ -28,8 +28,8 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	my( %args ) = @_;
 	my( $repo, $eprint, $changed ) = @args{qw( repository dataobj changed )};
 
-    # if this is an existing record, or a new record that has been imported, initialise
-    # the 'dates' field first
+	# if this is an existing record, or a new record that has been imported, initialise
+	# the 'dates' field first
 	if( !$eprint->is_set( "dates" ) && $eprint->is_set( "date" ) )
 	{
 		$eprint->set_value( "dates", [
@@ -41,7 +41,7 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	}
 
 	# set a suitable 'date' and 'date_type' value
-    # use published date for preference - if not available use accepted date, and so on
+	# use published date for preference - if not available use accepted date, and so on
 	my %priority = (
 		published => 1,
 		accepted => 2,
