@@ -20,17 +20,17 @@ If the RIOXX2 package is installed (https://github.com/eprintsug/rioxx2) it will
 
 After installation the following steps are required:
 
-1. Add new field to workflow
+### Add new field to workflow ###
 
 Edit workflow file (usually archives/repoid/cfg/workflows/eprint/default.xml) and:
 
  * replace all occurences of "date" with "dates" (be sure to retain the 'required' setting)
  * remove all occurences of "date_type"
 
-2. Migrate existing records
+### Migrate existing records ###
 
 To migrate all existing records to use the new date field, run the following command:
 
 ````
- bin/epadmin recommit <repoid>
+bin/epadmin recommit <repoid> --verbose
 ````
