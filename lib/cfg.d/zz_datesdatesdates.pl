@@ -46,7 +46,8 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 		published => 1,
 		accepted => 2,
 		submitted => 3,
-		completed => 4,
+		deposited => 4,
+		completed => 5,
 		default => 99,
 	);
 
@@ -62,6 +63,8 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 
 }, priority => 100 );
 
+# Validation - ensure that only one of each type of date (published, accepted etc).
+# has been entered
 $c->add_trigger( EPrints::Const::EP_TRIGGER_VALIDATE_FIELD, sub
 {
 	my( %args ) = @_;
