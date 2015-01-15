@@ -52,7 +52,7 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 
 	my @dates = sort {
 		$priority{$a->{date_type}||"default"} <=> $priority{$b->{date_type}||"default"}
-	} @{ $eprint->value( "dates" )||[] };
+	} @{ $eprint->value( "dates" ) };
 
 	my $date = scalar @dates ? $dates[0]->{date} : undef;
 	my $date_type = scalar @dates ? $dates[0]->{date_type} : undef;
@@ -60,4 +60,33 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	$eprint->set_value( "date", $date );
 	$eprint->set_value( "date_type", $date_type );
 
+}, priority => 100 );
+
+$c->add_trigger( EPrints::Const::EP_TRIGGER_VALIDATE_FIELD, sub
+{
+	my( %args ) = @_;
+	my( $repo, $field, $eprint, $value, $problems ) = @args{qw( repository field dataobj value problems )};
+
+	return unless $field->name eq "dates_date_type";
+
+	my %seen;
+	for( @{ $value } )
+	{
+		next unless defined $_;
+		$seen{$_}++;
+	}
+
+	for( keys %seen )
+	{
+		if( $seen{$_} > 1 )
+		{
+			my $parent = $field->get_property( "parent" );
+			my $fieldname = $repo->xml->create_element( "span", class=>"ep_problem_field:".$parent->get_name );
+			$fieldname->appendChild( $parent->render_name( $repo ) );
+			push @$problems, $repo->html_phrase( "validate:datesdatesdates:duplicate_date_type",
+				fieldname => $fieldname,
+				date_type => $repo->html_phrase( "eprint_fieldopt_dates_date_type_$_" ),
+			);
+		}
+	}
 }, priority => 100 );
