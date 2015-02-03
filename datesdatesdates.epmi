@@ -1,39 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
-<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://template.ulcc.ac.uk/id/epm/datesdatesdates'>
+<epm id='http://winch.localhost/id/epm/datesdatesdates' xmlns='http://eprints.org/ep2/data/2.0'>
   <epmid>datesdatesdates</epmid>
-  <uri>http://template.ulcc.ac.uk/id/epm/datesdatesdates</uri>
   <documents>
     <document>
       <files>
         <file>
+          <datasetid>document</datasetid>
+          <filename>epm/datesdatesdates/cfg/cfg.d/zz_datesdatesdates.pl</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>d9f8168e02fcd3a1d1703625c808d533</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>490</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>cfg.d/zz_datesdatesdates_triggers.pl</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>b2122beaba3b2b9e8ed2e3813985043c</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>2196</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
           <filename>cfg.d/zzz_datesdatesdates_rioxx2.pl</filename>
-          <mime_type>inode/symlink</mime_type>
+          <mime_type>text/plain</mime_type>
           <hash>766c22157e7c27d1c6022db436d82067</hash>
           <hash_type>MD5</hash_type>
           <filesize>833</filesize>
         </file>
         <file>
-          <filename>epm/datesdatesdates/cfg/cfg.d/zz_datesdatesdates.pl</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>dc6c4b4cc82d7671be5cb60b2eb95ca2</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>2687</filesize>
-        </file>
-        <file>
+          <datasetid>document</datasetid>
           <filename>lang/en/phrases/zz_datesdatesdates.xml</filename>
-          <mime_type>inode/symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>838e36afd4cc2d4d294a5636e226a966</hash>
           <hash_type>MD5</hash_type>
           <filesize>1793</filesize>
         </file>
       </files>
-      <mime_type>inode/symlink</mime_type>
+      <mime_type>application/xml</mime_type>
       <format>other</format>
       <main>lang/en/phrases/zz_datesdatesdates.xml</main>
       <content>install</content>
     </document>
   </documents>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <creators>
     <item>
       <name>
@@ -43,7 +53,7 @@
       <id>timothy.miles-board@london.ac.uk</id>
     </item>
   </creators>
-  <datestamp>2015-01-15 11:35:39</datestamp>
+  <datestamp>2015-02-03 10:03:14</datestamp>
   <title>Dates, Dates, Dates</title>
   <description>Allows a publication record to have multiple dates. By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion. This module provides a replacement for the default EPrints &quot;Date&quot; and &quot;Date Type&quot; fields which allows the entry of any combination of the following: date of publication, date of acceptance, date of submission, date of deposit, date of completion. Compatible with the RIOXX2 package.
 </description>
