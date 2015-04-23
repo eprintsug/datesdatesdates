@@ -5,6 +5,9 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	my( %args ) = @_;
 	my( $repo, $eprint, $changed ) = @args{qw( repository dataobj changed )};
 
+	# dates might not exist if multiple archives are running andone doesn't have this enabled 
+	return unless $eprint->get_dataset->has_field( "dates" );
+	
 	# if this is an existing record, or a new record that has been imported, initialise
 	# the 'dates' field first
 	if( !$eprint->is_set( "dates" ) && $eprint->is_set( "date" ) )
