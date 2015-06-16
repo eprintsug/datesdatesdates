@@ -48,5 +48,5 @@ Recommended alternative to (1): remove all occurences of "date" and add a single
 To migrate all existing records to use the new date field, run the following command:
 
 ````
-bin/epadmin recommit <repoid> --verbose
+bin/epadmin recommit <repoid> eprint --verbose
 ````
