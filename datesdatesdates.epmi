@@ -56,6 +56,6 @@
   </creators>
   <datestamp>2015-06-16 13:13:23</datestamp>
   <title>Dates, Dates, Dates</title>
-  <description>Allows a publication record to have multiple dates. By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion. This module provides a replacement for the default EPrints &quot;Date&quot; and &quot;Date Type&quot; fields which allows the entry of any combination of the following: date of publication, date of acceptance, date of submission, date of deposit, date of completion. Compatible with the RIOXX2 package.
+  <description>Allows a publication record to have multiple dates. By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion. This module provides a replacement for the default EPrints &quot;Date&quot; and &quot;Date Type&quot; fields which allows the entry of any combination of the following: date of publication, date of acceptance, date of submission, date of completion. Compatible with the RIOXX2 package.
 </description>
 </epm>

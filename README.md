@@ -9,7 +9,6 @@ This module provides a replacement for the default EPrints "Date" and "Date Type
  * Date of publication
  * Date of acceptance
  * Date of submission
- * Date of deposit
  * Date of completion
 
 ## RIOXX2 Support ##
