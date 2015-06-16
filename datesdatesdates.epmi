@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://drtjmb.com/id/epm/datesdatesdates'>
+<epm id='http://drtjmb.com/id/epm/datesdatesdates' xmlns='http://eprints.org/ep2/data/2.0'>
   <epmid>datesdatesdates</epmid>
   <uri>http://drtjmb.com/id/epm/datesdatesdates</uri>
   <documents>
@@ -9,9 +9,9 @@
           <datasetid>document</datasetid>
           <filename>epm/datesdatesdates/cfg/cfg.d/zz_datesdatesdates.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>d9f8168e02fcd3a1d1703625c808d533</hash>
+          <hash>ed6a9ec7a5c282bd5c92d063f1dbec1c</hash>
           <hash_type>MD5</hash_type>
-          <filesize>490</filesize>
+          <filesize>480</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -44,7 +44,7 @@
       <content>install</content>
     </document>
   </documents>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <creators>
     <item>
       <name>
@@ -54,7 +54,7 @@
       <id>timothy.miles-board@london.ac.uk</id>
     </item>
   </creators>
-  <datestamp>2015-06-16 13:01:53</datestamp>
+  <datestamp>2015-06-16 13:13:23</datestamp>
   <title>Dates, Dates, Dates</title>
   <description>Allows a publication record to have multiple dates. By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion. This module provides a replacement for the default EPrints &quot;Date&quot; and &quot;Date Type&quot; fields which allows the entry of any combination of the following: date of publication, date of acceptance, date of submission, date of deposit, date of completion. Compatible with the RIOXX2 package.
 </description>
