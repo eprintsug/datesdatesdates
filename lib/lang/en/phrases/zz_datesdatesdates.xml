@@ -3,7 +3,7 @@
 <epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
 
 <epp:phrase id="eprint_fieldname_dates">Dates</epp:phrase>
-<epp:phrase id="eprint_fieldhelp_dates">Enter significant dates for this EPrint.</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_dates">Please enter at least one date - for <strong><epc:phrase ref="eprint_typename_article"/></strong> and <strong><epc:phrase ref="eprint_typename_conference_item"/></strong> deposits, you will need to enter at least the <strong>Accepted</strong> date.</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_dates_date">Date</epp:phrase>
 <epp:phrase id="eprint_fieldname_dates_date_type">Event</epp:phrase>
@@ -24,5 +24,7 @@
 
 <!-- validation -->
 <epp:phrase id="validate:datesdatesdates:duplicate_date_type"><epc:pin name="fieldname"/> contains more than one <epc:pin name="date_type"/> Date.</epp:phrase>
+<epp:phrase id="validate:datesdatesdates:missing_accepted_date">You must enter an <strong>Accepted Date</strong> in <epc:pin name="fieldname"/></epp:phrase>
+<epp:phrase id="validate:datesdatesdates:incomplete_accepted_date">You must fully complete the <strong>Accepted Date</strong> in <epc:pin name="fieldname"/> with a year, month and day.</epp:phrase>
 
 </epp:phrases>

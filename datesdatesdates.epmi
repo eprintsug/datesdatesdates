@@ -17,9 +17,9 @@
           <datasetid>document</datasetid>
           <filename>lang/en/phrases/zz_datesdatesdates.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>838e36afd4cc2d4d294a5636e226a966</hash>
+          <hash>c8527fa84d19c84c27e7864486ccac64</hash>
           <hash_type>MD5</hash_type>
-          <filesize>1793</filesize>
+          <filesize>2356</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -33,9 +33,9 @@
           <datasetid>document</datasetid>
           <filename>cfg.d/zz_datesdatesdates_triggers.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>cd48c6b190c211b433a584be5e266bd5</hash>
+          <hash>aeaafaca056677e0dc5791994075f332</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2343</filesize>
+          <filesize>3810</filesize>
         </file>
       </files>
       <mime_type>text/plain</mime_type>
@@ -44,7 +44,7 @@
       <content>install</content>
     </document>
   </documents>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <creators>
     <item>
       <name>
@@ -54,7 +54,7 @@
       <id>timothy.miles-board@london.ac.uk</id>
     </item>
   </creators>
-  <datestamp>2015-06-16 13:20:48</datestamp>
+  <datestamp>2015-07-29 20:58:26</datestamp>
   <title>Dates, Dates, Dates</title>
   <description>Allows a publication record to have multiple dates. By default, EPrints only allows one date to be entered per publication at any given time: either the date of publication, date of submission or date of completion. This module provides a replacement for the default EPrints &quot;Date&quot; and &quot;Date Type&quot; fields which allows the entry of any combination of the following: date of publication, date of acceptance, date of submission, date of completion. Compatible with the RIOXX2 package.
 </description>
