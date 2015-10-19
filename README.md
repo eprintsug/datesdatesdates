@@ -27,7 +27,7 @@ Edit workflow file (usually archives/repoid/cfg/workflows/eprint/default.xml) an
  2. remove all occurences of "date_type"
  3. remove rioxx2_dateAccepted and rioxx2_publication_date fields from rioxx2 stage if using RIOXX2 package
 
-Recommended alternative to (1): remove all occurences of "date" and add a single occurence of "dates" in its own component (ie. not in the Publication Details component) - this will give you extra validation warnings if a date is entered but an event not selected or vice versa.
+Recommended alternative to (1): remove all occurences of "date"* and add a single occurence of "dates" in its own component (ie. not in the Publication Details component) - this will give you extra validation warnings if a date is entered but an event not selected or vice versa.
 
 ````
   <stage name="core">
@@ -42,7 +42,9 @@ Recommended alternative to (1): remove all occurences of "date" and add a single
       <title>Publication Details</title>
       [...]
 ````
-
+```` * 
+.,$s/\(<field ref="date"\/>\n\s*<field ref="date_type"\/>\)/<!-- \1 -->/gc
+````
 ### Migrate existing records ###
 
 To migrate all existing records to use the new date field, run the following command:
