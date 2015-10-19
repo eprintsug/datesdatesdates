@@ -42,7 +42,7 @@ Recommended alternative to (1): remove all occurences of "date" and "date_type"*
       <title>Publication Details</title>
       [...]
 ````
-\* to comment out all occcurances of date
+\* to comment out all occcurances of date and date_type
 ```` 
 .,$s/\(<field ref="date"\/>\n\s*<field ref="date_type"\/>\)/<!-- \1 -->/gc
 ````
