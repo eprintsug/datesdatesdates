@@ -36,7 +36,7 @@ Recommended alternative to (1): remove all occurences of "date" and "date_type"*
 
     <component><field ref="divisions"/></component>
 
-    <component show_help="always"><field ref="dates"/></component>
+    <component show_help="always"><field ref="dates" required="yes"/></component>
 
     <component type="Field::Multi">
       <title>Publication Details</title>
