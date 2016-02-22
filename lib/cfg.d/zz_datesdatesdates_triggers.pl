@@ -25,10 +25,10 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	my %priority = (
 		published => 1,
 		published_online => 2
-		accepted => 2,
-		submitted => 3,
-		deposited => 4,
-		completed => 5,
+		accepted => 3,
+		submitted => 4,
+		deposited => 5,
+		completed => 6,
 		default => 99,
 	);
 

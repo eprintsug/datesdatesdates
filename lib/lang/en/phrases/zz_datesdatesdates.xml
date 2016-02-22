@@ -16,6 +16,7 @@
 <epp:phrase id="eprint_fieldopt_dates_date_type_completed">Completed</epp:phrase>
 
 <!-- additional phrases for default date_type field -->
+<epp:phrase id="eprint_fieldopt_date_type_published_online">Published Online</epp:phrase>
 <epp:phrase id="eprint_fieldopt_date_type_accepted">Acceptance</epp:phrase>
 <epp:phrase id="eprint_fieldopt_date_type_deposited">Deposit</epp:phrase>
 
