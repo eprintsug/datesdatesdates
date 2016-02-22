@@ -9,6 +9,7 @@
 <epp:phrase id="eprint_fieldname_dates_date_type">Event</epp:phrase>
 
 <epp:phrase id="eprint_fieldopt_dates_date_type_published">Published</epp:phrase>
+<epp:phrase id="eprint_fieldopt_dates_date_type_published_online">Published Online</epp:phrase>
 <epp:phrase id="eprint_fieldopt_dates_date_type_accepted">Accepted</epp:phrase>
 <epp:phrase id="eprint_fieldopt_dates_date_type_submitted">Submitted</epp:phrase>
 <epp:phrase id="eprint_fieldopt_dates_date_type_deposited">Deposited</epp:phrase>

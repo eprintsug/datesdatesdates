@@ -24,7 +24,7 @@ $c->{rioxx2_value_publication_date} = sub {
 	for( @{ $eprint->value( "dates" ) } )
 	{
 		next unless defined $_->{date_type};
-		next unless $_->{date_type} eq "published";
+		next unless $_->{date_type} eq "published_online";
 		return $_->{date};
 	}
 	return undef;
