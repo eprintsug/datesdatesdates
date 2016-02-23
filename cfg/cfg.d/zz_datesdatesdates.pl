@@ -14,7 +14,7 @@ $c->add_dataset_field( "eprint",
 			{
 				sub_name => 'date_type',
 				type => 'set',
-				options => [qw( published accepted submitted completed )],
+				options => [qw( published published_online accepted submitted completed )],
 				required => 1
 			},
 		],

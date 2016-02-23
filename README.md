@@ -7,6 +7,7 @@ By default, EPrints only allows one date to be entered per publication at any gi
 This module provides a replacement for the default EPrints "Date" and "Date Type" fields which allows the entry of any combination of the following:
 
  * Date of publication
+ * Date of online publication 
  * Date of acceptance
  * Date of submission
  * Date of completion

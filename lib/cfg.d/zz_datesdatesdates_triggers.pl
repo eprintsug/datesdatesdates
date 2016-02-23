@@ -24,10 +24,11 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 	# use published date for preference - if not available use accepted date, and so on
 	my %priority = (
 		published => 1,
-		accepted => 2,
-		submitted => 3,
-		deposited => 4,
-		completed => 5,
+		published_online => 2,
+		accepted => 3,
+		submitted => 4,
+		deposited => 5,
+		completed => 6,
 		default => 99,
 	);
 
