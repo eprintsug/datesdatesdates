@@ -1,5 +1,6 @@
 # To prevent citations, exports etc. from breaking, populate the default 'date' and 'date_type'
 # fields using a suitable value from the new 'dates' field
+
 $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 {
 	my( %args ) = @_;
@@ -20,21 +21,13 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 		]);
 	}
 
-	# set a suitable 'date' and 'date_type' value
-	# use published date for preference - if not available use accepted date, and so on
-	my %priority = (
-		published => 1,
-		published_online => 2,
-		accepted => 3,
-		submitted => 4,
-		deposited => 5,
-		completed => 6,
-		default => 99,
-	);
+	my $date_priorities = $repo->config("date_priorities");
+
+	my $prioirtiy_zero = 0;
 
 	my @dates = sort {
-		$priority{$a->{date_type}||"default"} <=> $priority{$b->{date_type}||"default"}
-	} @{ $eprint->value( "dates" ) };
+		($date_priorities->{$b->{date_type}} || $priority_zero) <=> ($date_priorities->{$a->{date_type}} || $priority_zero)
+        } @{ $eprint->value( "dates" ) };
 
 	my $date = scalar @dates ? $dates[0]->{date} : undef;
 	my $date_type = scalar @dates ? $dates[0]->{date_type} : undef;
