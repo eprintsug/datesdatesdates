@@ -23,7 +23,7 @@ $c->add_dataset_trigger( 'eprint', EPrints::Const::EP_TRIGGER_BEFORE_COMMIT, sub
 
 	my $date_priorities = $repo->config("date_priorities");
 
-	my $prioirtiy_zero = 0;
+	my $priority_zero = 0;
 
 	my @dates = sort {
 		($date_priorities->{$b->{date_type}} || $priority_zero) <=> ($date_priorities->{$a->{date_type}} || $priority_zero)
