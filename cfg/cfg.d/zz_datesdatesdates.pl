@@ -21,3 +21,14 @@ $c->add_dataset_field( "eprint",
 		input_boxes => 1
 	}
 );
+
+
+
+$c->{date_priorities} = {
+                published => 1000,
+                published_online => 800,
+                accepted => 600,
+                submitted => 400,
+                deposited => 300,
+                completed => 200,
+        };
